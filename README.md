@@ -26,3 +26,15 @@ To eliminate the economic vulnerability inherent to informal cash-on-delivery ma
 ### How to Build
 ```bash
 soroban contract build
+
+## Deployed Contract
+
+| Field | Value |
+|-------|-------|
+| Contract ID | `CCTILHT4KYKJNYUPJKLIU2R2WT6FI7BP3W25SL5F2SSJFVUIEVXFP2KW` |
+| Network | testnet |
+| Explorer | [View on stellar.expert](https://stellar.expert/explorer/testnet/contract/CCTILHT4KYKJNYUPJKLIU2R2WT6FI7BP3W25SL5F2SSJFVUIEVXFP2KW) |
+| Deploy Tx | [View transaction](https://stellar.expert/explorer/testnet/tx/ddf85dc745e94a9a27acbdccbaffaa57b68ffcfc49294d2a3ce21e8fbe87bc9d) |
+| Deployed | 2026-06-26 07:44:25 UTC |
+| Wallet | freighter (`GCAP…VYKJ`) |
+

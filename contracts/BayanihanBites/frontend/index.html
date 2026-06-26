@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BayanihanBites — Merchant HQ & Escrow Management Console</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Full Viewport Responsive Grid Wrapper -->
+  <div class="app-container">
+    
+    <!-- Web Top Navigation Bar -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="app-logo">
+          <span>B</span>
+        </div>
+        <div class="app-title-group">
+          <div class="title-row">
+            <h1>BayanihanBites</h1>
+            <span class="badge-hq">HQ CONSOLE</span>
+          </div>
+          <p class="network-status">
+            <span class="status-indicator"></span> 
+            Soroban Testnet RPC: <span class="font-mono text-highlight">https://soroban-testnet.stellar.org</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Active Wallet & Contract Aggregator -->
+      <div class="header-right">
+        <div class="wallet-widget">
+          <div class="wallet-meta">
+            <p class="wallet-label">Merchant Wallet Account</p>
+            <p class="wallet-address font-mono">GD7X...3P9A</p>
+          </div>
+          <div class="widget-divider"></div>
+          <div class="wallet-balance">
+            <span>4,250.00 PHPC</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dual-Column Operational Workspace -->
+    <div class="workspace-grid">
+      
+      <!-- Left Workspace: Merchant Kitchen Order Pipeline -->
+      <main class="primary-column">
+        <div class="section-header">
+          <h2>Active Merchant Escrow Queues</h2>
+          <span class="refresh-caption">Auto-refreshing live via RPC stream</span>
+        </div>
+
+        <!-- Active Order Escrow Detail Board -->
+        <div class="escrow-board">
+          <div class="board-summary">
+            <div class="summary-details">
+              <div class="contract-meta">
+                <span class="contract-id font-mono">CONTRACT_ID: CBZZ...55XX</span>
+                <span class="badge-state">State: Ordered</span>
+              </div>
+              <h3 class="order-title">Batch Order #8821 — Malolos Hub Delivery</h3>
+            </div>
+            <div class="summary-financial">
+              <span class="amount-value">250.00</span>
+              <span class="amount-denom">PHPC Token</span>
+            </div>
+          </div>
+
+          <!-- Horizontal Multi-Party Milestone Tracker -->
+          <div class="milestone-tracker">
+            <div class="tracker-line-bg">
+              <div class="tracker-line-progress" style="width: 33.33%;"></div>
+            </div>
+            
+            <div class="milestone-steps">
+              <div class="step-card active">
+                <span class="step-title">1. ORDERED & FUNDED</span>
+                <span class="step-subtitle">Escrow holding assets</span>
+              </div>
+              <div class="step-card">
+                <span class="step-title">2. KITCHEN PICKUP</span>
+                <span class="step-subtitle">Triggers `pickup_order`</span>
+              </div>
+              <div class="step-card">
+                <span class="step-title">3. HANDOVER COMPLETE</span>
+                <span class="step-subtitle">Triggers `confirm_delivery`</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ledger Financial Breakdown Table -->
+          <div class="table-responsive">
+            <table class="ledger-table">
+              <thead>
+                <tr>
+                  <th>Target Role</th>
+                  <th>Stellar Ledger Address</th>
+                  <th class="text-right">Escrow Locked Share</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="role-cell">
+                    <span class="role-dot dot-merchant"></span> Merchant Kitchen
+                  </td>
+                  <td class="font-mono text-muted text-xs">GD2S...NN34</td>
+                  <td class="text-right font-bold">200.00 PHPC</td>
+                </tr>
+                <tr>
+                  <td class="role-cell">
+                    <span class="role-dot dot-courier"></span> Logistics Rider
+                  </td>
+                  <td class="font-mono text-muted text-xs">GBA7...LL88</td>
+                  <td class="text-right font-bold">50.00 PHPC</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Primary Action Console Controls -->
+          <div class="action-controls">
+            <button class="btn btn-secondary">Flag Dispute Loop</button>
+            <button class="btn btn-primary">Execute Pickup (Call `pickup_order`)</button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right Workspace: On-Chain Event & Log Stream -->
+      <aside class="sidebar-column">
+        <h3 class="sidebar-title">Live Ledger Diagnostics</h3>
+        
+        <div class="diagnostics-panel">
+          <div class="panel-header">
+            <span class="panel-label">Contract Events</span>
+            <span class="pulse-indicator"></span>
+          </div>
+
+          <!-- Real-Time Event Nodes -->
+          <div class="event-stream font-mono">
+            
+            <!-- Event Item 1 -->
+            <div class="event-node-card status-success">
+              <div class="event-node-header">
+                <span class="event-method">▶ deposit_escrow()</span>
+                <span class="event-ledger-index">Ledger: #4901</span>
+              </div>
+              <p class="event-detail-row">Caller: Customer (GA89...77BB)</p>
+              <p class="event-subtext">Value: 250.00 PHPC transferred to contract</p>
+            </div>
+
+            <!-- Event Item 2 -->
+            <div class="event-node-card status-inactive">
+              <div class="event-node-header">
+                <span class="event-method">ℹ initialize()</span>
+                <span class="event-ledger-index">Ledger: #4900</span>
+              </div>
+              <p class="event-detail-row">State variables successfully committed to storage.</p>
+            </div>
+            
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+</body>
+</html>
